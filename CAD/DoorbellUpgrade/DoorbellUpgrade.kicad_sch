@@ -1083,11 +1083,11 @@
         )
       )
     )
-    (symbol "power:-5V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 2.54 0)
+    (symbol "power:+5V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Value" "-5V" (at 0 3.81 0)
+      (property "Value" "+5V" (at 0 3.556 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (at 0 0 0)
@@ -1099,27 +1099,39 @@
       (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Power symbol creates a global label with name \"-5V\"" (at 0 0 0)
+      (property "ki_description" "Power symbol creates a global label with name \"+5V\"" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "-5V_0_0"
-        (pin power_in line (at 0 0 90) (length 0) hide
-          (name "-5V" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
+      (symbol "+5V_0_1"
+        (polyline
+          (pts
+            (xy -0.762 1.27)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
         )
-      )
-      (symbol "-5V_0_1"
         (polyline
           (pts
             (xy 0 0)
-            (xy 0 1.27)
-            (xy 0.762 1.27)
             (xy 0 2.54)
-            (xy -0.762 1.27)
-            (xy 0 1.27)
           )
           (stroke (width 0) (type default))
-          (fill (type outline))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0.762 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "+5V_1_1"
+        (pin power_in line (at 0 0 90) (length 0) hide
+          (name "+5V" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -1435,31 +1447,6 @@
     )
   )
 
-  (symbol (lib_id "power:-5V") (at 121.92 134.62 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 22ba60ac-1052-4d69-98c2-d641984c9253)
-    (property "Reference" "#PWR06" (at 121.92 137.16 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "-5V" (at 121.666 138.5316 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 121.92 134.62 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 121.92 134.62 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4eca0888-cce5-4d94-8548-dc4fd61bc476))
-    (instances
-      (project "DoorbellUpgrade"
-        (path "/092c1a95-a0ce-445b-abe2-a93e0f430456"
-          (reference "#PWR06") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:C_Polarized") (at 60.96 64.77 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 23f3dadc-c490-4fed-8e3f-c40896ea2d0e)
@@ -1507,6 +1494,31 @@
       (project "DoorbellUpgrade"
         (path "/092c1a95-a0ce-445b-abe2-a93e0f430456"
           (reference "R4") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+5V") (at 121.92 134.62 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 30df7e1f-0a63-4496-a692-c35ccb0d00d4)
+    (property "Reference" "#PWR06" (at 121.92 130.81 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+5V" (at 121.92 139.7 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 121.92 134.62 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 121.92 134.62 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 43615b57-6ffd-422c-ae1c-ac3ef01eb473))
+    (instances
+      (project "DoorbellUpgrade"
+        (path "/092c1a95-a0ce-445b-abe2-a93e0f430456"
+          (reference "#PWR06") (unit 1)
         )
       )
     )
